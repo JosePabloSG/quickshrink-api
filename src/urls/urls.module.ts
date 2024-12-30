@@ -4,9 +4,10 @@ import { UrlsService } from './urls.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Url } from './entities/url.entity';
 import { UrlRepository } from './repository/url.repository';
+import { UsersModule } from 'src/users/users.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Url])],
+  imports: [TypeOrmModule.forFeature([Url]), UsersModule],
   controllers: [UrlsController],
   providers: [UrlsService, UrlRepository],
   exports: [UrlsService],
