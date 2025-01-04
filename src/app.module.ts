@@ -5,6 +5,7 @@ import { UsersModule } from './users/users.module';
 import { UrlsModule } from './urls/urls.module';
 import { ClicksModule } from './clicks/clicks.module';
 import { QrCodesModule } from './qr-codes/qr-codes.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { QrCodesModule } from './qr-codes/qr-codes.module';
     UrlsModule,
     ClicksModule,
     QrCodesModule,
+    AuthModule,
   ],
 })
 export class AppModule {}
